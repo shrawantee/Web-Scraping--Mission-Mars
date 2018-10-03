@@ -16,10 +16,4 @@ def index():
 
 @app.route("/scrape")
 def scrape():
-    listings_news = mongo.db.listings_news
-    listings_data = scrape_mars.scrape()
-    listings_news.update({}, listings_data, upsert=True)
-    return redirect("/", code=302)
-
-if __name__ == "__main__":
-    app.run(debug=True)
+    
